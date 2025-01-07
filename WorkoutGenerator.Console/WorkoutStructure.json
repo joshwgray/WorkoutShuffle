@@ -1,0 +1,88 @@
+{
+  "Structure": [
+    {
+      "IntensityClass": "WarmUp",
+      "Name": "Warm up",
+      "Length": {
+        "Unit": "Second",
+        "Value": 600
+      },
+      "Type": "Step",
+      "IntensityTarget": {
+        "Unit": "PercentOfFtp",
+        "Value": 50,
+        "MinValue":45,
+        "MaxValue":55
+      }
+    },
+    {
+      "IntensityClass": "Active",
+      "Name": "Active",
+      "Length": {
+        "Unit": "Second",
+        "Value": 2095
+      },
+      "Type": "Step",
+      "IntensityTarget": {
+        "Unit": "PercentOfFtp",
+        "Value": 65,
+        "MinValue":60,
+        "MaxValue":70
+      }
+    },
+    {
+      "Type": "Repetition",
+      "Length": {
+        "Unit": "Repetition",
+        "Value": 3
+      },
+      "Steps": [
+        {
+          "IntensityClass": "Active",
+          "Name": "Hard",
+          "Length": {
+            "Unit": "Second",
+            "Value": 60
+          },
+          "Type": "Step",
+          "IntensityTarget": {
+            "Unit": "PercentOfFtp",
+            "Value": 115
+          },
+          "CadenceTarget": {
+            "Unit": "rpm",
+            "MinValue": 70,
+            "MaxValue": 80
+          }
+        },
+        {
+          "IntensityClass": "Rest",
+          "Name": "Easy",
+          "Length": {
+            "Unit": "Second",
+            "Value": 60
+          },
+          "Type": "Step",
+          "IntensityTarget": {
+            "Unit": "PercentOfFtp",
+            "Value": 50
+          }
+        }
+      ]
+    },
+    {
+      "IntensityClass": "CoolDown",
+      "Name": "Cool Down",
+      "Length": {
+        "Unit": "Second",
+        "Value": 600
+      },
+      "Type": "Step",
+      "IntensityTarget": {
+        "Unit": "PercentOfFtp",
+        "Value": 50
+      },
+      "OpenDuration" : true
+    }
+  ]
+}
