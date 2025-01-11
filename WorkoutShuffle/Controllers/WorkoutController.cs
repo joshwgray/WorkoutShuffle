@@ -44,7 +44,7 @@ public class WorkoutController : ControllerBase
         return Ok(config);
     }
 
-    /*[HttpPost]
+    [HttpPost]
     [Route("Workouts")]
     public async Task<IActionResult> CreateWorkouts(CreateWorkoutRequest request)
     {
@@ -58,5 +58,5 @@ public class WorkoutController : ControllerBase
         });
 
         return Ok(config);
-    }*/
+    }
 }
