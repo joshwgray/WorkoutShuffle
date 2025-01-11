@@ -1,5 +1,6 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using WorkoutShuffle.Core.Workouts.Commands;
 using WorkoutShuffle.Core.Workouts.Queries;
 
 namespace WorkoutShuffle.Controllers;
@@ -26,7 +27,7 @@ public class WorkoutController : ControllerBase
         return Ok(result);
     }
 
-    /*[HttpPost]
+    [HttpPost]
     [Route("Workout")]
     public async Task<IActionResult> CreateWorkout(CreateWorkoutRequest request)
     {
@@ -41,7 +42,7 @@ public class WorkoutController : ControllerBase
         });
 
         return Ok(config);
-    }*/
+    }
 
     /*[HttpPost]
     [Route("Workouts")]

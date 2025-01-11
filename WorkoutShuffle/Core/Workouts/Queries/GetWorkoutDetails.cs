@@ -15,7 +15,6 @@ public class GetWorkoutDetails : IRequest<WorkoutDetailDto>
 
         public Task<WorkoutDetailDto> Handle(GetWorkoutDetails request, CancellationToken cancellationToken)
         {
-
             throw new NotImplementedException();
         }
     }
