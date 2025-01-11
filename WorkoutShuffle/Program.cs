@@ -18,12 +18,11 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
-    /*app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/openapi/v1.json", "WorkoutGenerator API V1");
-    });*/
-
-    app.MapScalarApiReference();
+    app.MapScalarApiReference(options => 
+        options
+            .WithTitle("Workout Generator API")
+            .WithTheme(ScalarTheme.Mars)
+            .WithDefaultHttpClient(ScalarTarget.CSharp, ScalarClient.HttpClient));
 
 
 }
