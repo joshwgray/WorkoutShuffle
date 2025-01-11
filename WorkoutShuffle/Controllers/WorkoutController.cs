@@ -5,8 +5,8 @@ using WorkoutShuffle.Core.Workouts.Queries;
 
 namespace WorkoutShuffle.Controllers;
 
-[ApiConventionType(typeof(DefaultApiConventions))]
-[Route("api/v1/[controller]")]
+[ApiController]
+[Route("[controller]")]
 public class WorkoutController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -28,7 +28,7 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpPost]
-    [Route("Workout")]
+    [Route("CreateWorkout")]
     public async Task<IActionResult> CreateWorkout(CreateWorkoutRequest request)
     {
         var config = await _mediator.Send(new CreateWorkout()
@@ -45,7 +45,7 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpPost]
-    [Route("Workouts")]
+    [Route("CreateWorkouts")]
     public async Task<IActionResult> CreateWorkouts(CreateWorkoutRequest request)
     {
         var config = await _mediator.Send(new CreateWorkouts()
